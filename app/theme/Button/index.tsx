@@ -31,12 +31,14 @@ interface ButtonProps {
   disabled?: boolean;
   large?: boolean;
   trailingIcon?: boolean;
+  testID: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
   type = 'primary',
   disabled = false,
   onPress,
+  testID,
   ...props
 }) => {
   const animatedValue = useRef(new Animated.Value(disabled ? 0.5 : 1)).current;
@@ -52,7 +54,8 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <TouchFeedback
       animated
-      onPress={disabled ? () => null : onPress}
+      testID={testID}
+      onPress={onPress}
       style={[
         style.button,
         props.large ? style.large : {},

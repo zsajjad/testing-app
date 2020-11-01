@@ -13,6 +13,11 @@
     "strict": true,
     "target": "esnext",
     "baseUrl": "./app",
+    "paths": {
+      "test": [
+        "__tests__"
+      ],
+    },
   },
   "exclude": [
     "node_modules",

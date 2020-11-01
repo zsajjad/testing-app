@@ -3,6 +3,7 @@
  * Input
  *
  */
+import omit from 'lodash/omit';
 import React from 'react';
 import {TextInput, TextInputProps} from 'react-native';
 
@@ -17,12 +18,12 @@ export interface InputProps extends TextInputProps {
 // @ts-ignore
 const Input = React.forwardRef((props: InputProps, ref: React.RefObject) => (
   <>
-    {props.label ? <Text style={style.label}>{props.label}</Text> : null}
+    {props.label ? <Text style={style.label} testID={`${props.testID}_LABEL`}>{props.label}</Text> : null}
     <TextInput
       clearButtonMode="unless-editing"
       {...inputStyleProps}
       blurOnSubmit
-      {...props}
+      {...omit(props, ['label', 'error'])}
       ref={ref}
       style={[
         style.input,
@@ -31,7 +32,7 @@ const Input = React.forwardRef((props: InputProps, ref: React.RefObject) => (
         props.multiline ? style.multiline : {},
       ]}
     />
-    {props.error ? <Text style={style.error}>{props.error}</Text> : null}
+    {props.error ? <Text style={style.error} testID={`${props.testID}_ERROR`}>{props.error}</Text> : null}
   </>
 ));
 

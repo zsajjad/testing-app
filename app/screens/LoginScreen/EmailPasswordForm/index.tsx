@@ -80,6 +80,7 @@ const EmailPasswordForm: React.FC<EmailPasswordFormProps> = (props) => {
                 }}
                 error={touched.email ? errors.email : null}
                 label={<FormattedMessage {...messages.emailLabel} isFragment />}
+                testID="emailInput"
               />
             </View>
             <View style={style.inputContainer}>
@@ -95,6 +96,7 @@ const EmailPasswordForm: React.FC<EmailPasswordFormProps> = (props) => {
                 label={
                   <FormattedMessage {...messages.passwordLabel} isFragment />
                 }
+                testID="passwordInput"
               />
             </View>
             <FormattedMessage
@@ -111,6 +113,7 @@ const EmailPasswordForm: React.FC<EmailPasswordFormProps> = (props) => {
                   <FormattedMessage {...messages.submitLabel} isFragment />
                 }
                 onPress={handleSubmit}
+                testID="submitButton"
               />
             </View>
           </>
