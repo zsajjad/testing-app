@@ -1,4 +1,8 @@
 export type RootStackParamList = {
-  Home: {};
-  Login: {};
+  Home: {
+    [key: string]: any;
+  };
+  Login: {
+    [key: string]: any;
+  };
 };

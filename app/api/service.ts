@@ -1,18 +1,21 @@
 import qs from 'query-string';
-import { API_URL } from '../constants';;
+import { API_URL } from '../constants';
 
-export function setAuthenticationHeader(token: string) {
+const defaultHeaders: {
+  'Content-Type': string;
+  Authorization?: string;
+} = {
+  'Content-Type': 'application/json',
+};
+
+export function setAuthenticationHeader(token: string): void {
   defaultHeaders.Authorization = `Bearer ${token}`;
 }
 
-export function removeAuthenticationHeader() {
-  // @ts-ignore
+export function removeAuthenticationHeader(): void {
   delete defaultHeaders.Authorization;
 }
 
-const defaultHeaders = {
-  'Content-Type': 'application/json',
-};
 interface IAPIArgs {
   url: string;
   method: 'GET' | 'POST';

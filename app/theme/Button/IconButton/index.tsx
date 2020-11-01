@@ -44,8 +44,7 @@ const IconButton: React.FC<IconButtonProps> = (props) => {
     <TouchFeedback
       // disabled={disabled}
       onPress={onPress}
-      style={[style.iconButton, disabled ? style.disabled : {}]}
-    >
+      style={[style.iconButton, disabled ? style.disabled : {}]}>
       <Icon style={[style.icon]} {...props.icon} />
     </TouchFeedback>
   );

@@ -4,7 +4,7 @@
  *
  */
 import React from 'react';
-import {Animated} from 'react-native';
+import { Animated } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';

@@ -7,15 +7,17 @@
  */
 
 import React from 'react';
-import {IntlProvider} from 'react-intl';
+import { IntlProvider } from 'react-intl';
 
 interface LanguageProps {
   locale: 'en';
-  messages: object;
+  messages: any;
   children?: any;
 }
 
-export default function LanguageProvider(props: LanguageProps) {
+export default function LanguageProvider(
+  props: LanguageProps,
+): React.ReactChild {
   return (
     <IntlProvider locale={props.locale} messages={props.messages[props.locale]}>
       {React.Children.only(props.children)}

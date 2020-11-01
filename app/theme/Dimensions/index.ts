@@ -1,5 +1,8 @@
 import { Dimensions, Platform } from 'react-native';
-import { getStatusBarHeight, getBottomSpace } from 'react-native-iphone-x-helper';
+import {
+  getStatusBarHeight,
+  getBottomSpace,
+} from 'react-native-iphone-x-helper';
 import ExtraDimensions from 'react-native-extra-dimensions-android';
 
 const window = Dimensions.get('window');

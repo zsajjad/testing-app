@@ -14,7 +14,7 @@ const AnimatedNative = Animated.createAnimatedComponent(
 const RIPPLE = Platform.OS === 'android' && Platform.Version >= 21;
 
 type TouchFeedbackProps = {
-  style?: number | object | any[];
+  style?: number | any[];
   ripple?: boolean;
   animated?: boolean;
   onPress: (...args: any[]) => any;

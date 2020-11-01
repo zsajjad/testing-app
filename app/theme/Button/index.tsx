@@ -3,8 +3,8 @@
  * Button
  *
  */
-import React, {useEffect, useRef} from 'react';
-import {Animated} from 'react-native';
+import React, { useEffect, useRef } from 'react';
+import { Animated } from 'react-native';
 
 import Text from 'theme/Text';
 import TouchFeedback from 'theme/TouchFeedback';

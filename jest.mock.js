@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import 'react-native-gesture-handler/jestSetup';
 
 jest.mock('react-native-reanimated', () => {
@@ -5,7 +6,7 @@ jest.mock('react-native-reanimated', () => {
 
   // The mock for `call` immediately calls the callback which is incorrect
   // So we override it with a no-op
-  Reanimated.default.call = () => { };
+  Reanimated.default.call = () => ({});
 
   return Reanimated;
 });
@@ -13,14 +14,16 @@ jest.mock('react-native-reanimated', () => {
 // Silence the warning: Animated: `useNativeDriver` is not supported because the native animated module is missing
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
-jest.mock('@react-native-community/async-storage', () => ({ setItem: jest.fn() }))
+jest.mock('@react-native-community/async-storage', () => ({
+  setItem: jest.fn(),
+}));
 jest.mock('@react-navigation/native', () => {
   return {
     createNavigatorFactory: jest.fn(),
     useNavigation: jest.fn(),
-  }
-})
+  };
+});
 jest.mock('@react-navigation/stack', () => ({
   createStackNavigator: jest.fn(),
-}))
-jest.mock('@react-native-community/masked-view', () => ({}))
+}));
+jest.mock('@react-native-community/masked-view', () => ({}));

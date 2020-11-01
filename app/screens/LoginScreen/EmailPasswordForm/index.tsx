@@ -4,20 +4,24 @@
  *
  */
 
-import React, {useRef} from 'react';
-import {View} from 'react-native';
+import React, { useRef } from 'react';
+import { View, TextInput } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import * as yup from 'yup';
-import {Formik} from 'formik';
+import { Formik } from 'formik';
 
 import Button from 'theme/Button';
 import Input from 'theme/Input';
 import PasswordInput from 'theme/Input/PasswordInput';
-import FormattedMessage, {useFormattedMessage} from 'theme/FormattedMessage';
+import FormattedMessage, { useFormattedMessage } from 'theme/FormattedMessage';
 
 import style from './style';
 import messages from './messages';
-import { TEST_ID_EMAIL_INPUT, TEST_ID_PASSWORD_INPUT, TEST_ID_SUBMIT_BUTTON } from '../constants';
+import {
+  TEST_ID_EMAIL_INPUT,
+  TEST_ID_PASSWORD_INPUT,
+  TEST_ID_SUBMIT_BUTTON,
+} from '../constants';
 
 interface EmailPasswordFormProps {
   onSubmit: (data: EmailPasswordFormState) => void;
@@ -40,7 +44,7 @@ const initialValue = {
 };
 
 const EmailPasswordForm: React.FC<EmailPasswordFormProps> = (props) => {
-  const passwordFieldRef = useRef();
+  const passwordFieldRef = useRef<TextInput>();
 
   const emailPlaceholder = useFormattedMessage(messages.emailPlaceholder);
   const passwordPlaceholder = useFormattedMessage(messages.passwordPlaceholder);
@@ -73,9 +77,7 @@ const EmailPasswordForm: React.FC<EmailPasswordFormProps> = (props) => {
                 onBlur={handleBlur('email')}
                 value={values.email}
                 onSubmitEditing={() => {
-                  // @ts-ignore
                   if (passwordFieldRef?.current?.focus) {
-                    // @ts-ignore
                     passwordFieldRef.current?.focus();
                   }
                 }}
