@@ -12,12 +12,13 @@ import 'intl/locale-data/jsonp/en';
 
 import { DEFAULT_LOCALE } from './locales';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const enTranslationMessages = require('./translations/en.json');
 
 export const formatTranslationMessages = (
   locale: string,
   messages: { [x: string]: any },
-) => {
+): Record<string, string> => {
   const defaultFormattedMessages =
     locale !== DEFAULT_LOCALE
       ? formatTranslationMessages(DEFAULT_LOCALE, enTranslationMessages)

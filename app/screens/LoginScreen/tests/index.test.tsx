@@ -1,18 +1,23 @@
-import 'react-native'
-import React from 'react'
+import 'react-native';
+import React from 'react';
 import { fireEvent, waitFor } from '@testing-library/react-native';
-import AsyncStorage from '@react-native-community/async-storage'
+import AsyncStorage from '@react-native-community/async-storage';
 import fetchMock from 'fetch-mock-jest';
 
-import { render } from "utils/testWrapper";
+import { render } from 'utils/testWrapper';
 
-import {LOGIN_ENDPOINT, LOGIN_EXPECTED_RESPONSE} from 'api/login';
+import { LOGIN_ENDPOINT, LOGIN_EXPECTED_RESPONSE } from 'api/login';
 
 import { HOME } from 'router/routeNames';
 
 import LoginScreen from '../index';
 import { API_URL } from '../../../constants';
-import { AUTH_TOKEN_KEY, TEST_ID_EMAIL_INPUT, TEST_ID_PASSWORD_INPUT, TEST_ID_SUBMIT_BUTTON } from '../constants';
+import {
+  AUTH_TOKEN_KEY,
+  TEST_ID_EMAIL_INPUT,
+  TEST_ID_PASSWORD_INPUT,
+  TEST_ID_SUBMIT_BUTTON,
+} from '../constants';
 
 describe('Login Screen', () => {
   afterEach(() => {
@@ -42,15 +47,20 @@ describe('Login Screen', () => {
       fireEvent.changeText(passwordInput, password);
     });
 
-    await waitFor(() =>{
+    await waitFor(() => {
       fireEvent.press(button);
     });
 
-    expect(fetchMock)
-        .toHaveBeenCalledWith(endPoint, {"body": `{\"email\":\"${email}\",\"password\":\"${password}\"}`, "headers": {"Content-Type": "application/json"}, "method": "POST"});
+    expect(fetchMock).toHaveBeenCalledWith(endPoint, {
+      body: `{"email":"${email}","password":"${password}"}`,
+      headers: { 'Content-Type': 'application/json' },
+      method: 'POST',
+    });
     expect(navigate).toHaveBeenCalledTimes(1);
     expect(navigate).toHaveBeenCalledWith(HOME, {});
-    expect(AsyncStorage.setItem).toHaveBeenCalledWith(AUTH_TOKEN_KEY, LOGIN_EXPECTED_RESPONSE.data.tokens.jwtToken);
-
-  });  
+    expect(AsyncStorage.setItem).toHaveBeenCalledWith(
+      AUTH_TOKEN_KEY,
+      LOGIN_EXPECTED_RESPONSE.data.tokens.jwtToken,
+    );
+  });
 });

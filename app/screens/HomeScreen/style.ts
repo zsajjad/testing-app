@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import Colors from 'theme/Colors';
+// import Colors from 'theme/Colors';
 import Dimensions from 'theme/Dimensions';
 
 const style = StyleSheet.create({
@@ -11,7 +11,7 @@ const style = StyleSheet.create({
   buttonContainer: {
     flexDirection: 'row',
     padding: Dimensions.space4x,
-  }
+  },
 });
 
 export default style;

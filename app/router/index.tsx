@@ -2,11 +2,11 @@
 
 import React from 'react';
 
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import routes from './routes';
-import {HOME, LOGIN} from './routeNames';
+import { HOME } from './routeNames';
 
 const Stack = createStackNavigator();
 

@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import {Animated, Text as RNText, StyleSheet} from 'react-native';
+import { Animated, Text as RNText, StyleSheet } from 'react-native';
 import Colors from 'theme/Colors';
 
 const defaultStyle = StyleSheet.create({

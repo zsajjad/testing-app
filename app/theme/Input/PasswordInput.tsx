@@ -3,19 +3,19 @@
  * PasswordInput
  *
  */
-import React, {useState} from 'react';
-import {View} from 'react-native';
+import React, { useState } from 'react';
+import { View } from 'react-native';
 
 import IconButton from 'theme/Button/IconButton';
 
 import style from './style';
-import Input, {InputProps} from './index';
+import Input, { InputProps } from './index';
+import { TextInput } from 'react-native-gesture-handler';
 
-interface PasswordInput extends InputProps {}
+type PasswordInput = InputProps;
 
 const PasswordInput = React.forwardRef(
-  // @ts-ignore
-  (props: PasswordInput, ref: React.RefObject) => {
+  (props: PasswordInput, ref: React.Ref<TextInput>) => {
     const [show, setShow] = useState(false);
     return (
       <>

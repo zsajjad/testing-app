@@ -26,7 +26,7 @@ const style = StyleSheet.create({
   },
 });
 
-const FullScreenLoader: React.FC<{}> = () => (
+const FullScreenLoader: React.FC = () => (
   <View testID="loader" style={style.container}>
     <Text>Loading ...</Text>
   </View>

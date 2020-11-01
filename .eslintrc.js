@@ -1,9 +1,5 @@
-const fs = require('fs');
-const path = require('path');
-
-const prettierOptions = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, './.prettierrc'), 'utf8'),
-);
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const prettierOptions = require('./.prettierrc');
 
 module.exports = {
   root: true,
@@ -13,10 +9,10 @@ module.exports = {
     'prettier/standard',
     '@react-native-community',
     'prettier/@typescript-eslint',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
-  plugins: [
-    'prettier',
-  ],
+  plugins: ['prettier', 'jest'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -32,5 +28,11 @@ module.exports = {
         extensions: ['.js', '.jsx', '.json', '.native.js'],
       },
     },
+  },
+  rules: {
+    'prettier/prettier': ['error', prettierOptions],
+  },
+  env: {
+    'jest/globals': true,
   },
 };
