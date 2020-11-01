@@ -17,6 +17,7 @@ import FormattedMessage, {useFormattedMessage} from 'theme/FormattedMessage';
 
 import style from './style';
 import messages from './messages';
+import { TEST_ID_EMAIL_INPUT, TEST_ID_PASSWORD_INPUT, TEST_ID_SUBMIT_BUTTON } from '../constants';
 
 interface EmailPasswordFormProps {
   onSubmit: (data: EmailPasswordFormState) => void;
@@ -80,7 +81,7 @@ const EmailPasswordForm: React.FC<EmailPasswordFormProps> = (props) => {
                 }}
                 error={touched.email ? errors.email : null}
                 label={<FormattedMessage {...messages.emailLabel} isFragment />}
-                testID="emailInput"
+                testID={TEST_ID_EMAIL_INPUT}
               />
             </View>
             <View style={style.inputContainer}>
@@ -96,7 +97,7 @@ const EmailPasswordForm: React.FC<EmailPasswordFormProps> = (props) => {
                 label={
                   <FormattedMessage {...messages.passwordLabel} isFragment />
                 }
-                testID="passwordInput"
+                testID={TEST_ID_PASSWORD_INPUT}
               />
             </View>
             <FormattedMessage
@@ -113,7 +114,7 @@ const EmailPasswordForm: React.FC<EmailPasswordFormProps> = (props) => {
                   <FormattedMessage {...messages.submitLabel} isFragment />
                 }
                 onPress={handleSubmit}
-                testID="submitButton"
+                testID={TEST_ID_SUBMIT_BUTTON}
               />
             </View>
           </>

@@ -9,10 +9,10 @@ import { LOGIN } from 'router/routeNames';
 function HomeScreen(props: HomeScreenProps) {
   console.log('here');
   return (
-    <View style={style.screen}>
+    <View style={style.screen} testID="homeScreen">
       <View style={style.buttonContainer}>
         
-        <Button label={"Login"} type="accent" flex large onPress={() =>{ props.navigation.navigate(LOGIN, {})}} />
+        <Button testID="loginButton" label={"Login"} type="accent" flex large onPress={() =>{ props.navigation.navigate(LOGIN, {})}} />
         </View>
       <Text>Hello World</Text>
     </View>
