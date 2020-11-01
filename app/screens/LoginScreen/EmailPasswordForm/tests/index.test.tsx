@@ -4,15 +4,15 @@ import { fireEvent, waitFor } from '@testing-library/react-native';
 
 import { render } from "utils/testWrapper";
 import EmailPasswordForm from '../index';
-import { delay } from 'lodash';
+import { TEST_ID_EMAIL_INPUT, TEST_ID_PASSWORD_INPUT, TEST_ID_SUBMIT_BUTTON } from '../../constants';
 
 describe('<EmailPasswordForm />', () => {
   it('Expect to show password required', async () => {
     const email = 'email@email.com'
 
     const { getByTestId } = render(<EmailPasswordForm onSubmit={() => {}} onForgotPasswordPress={() => {}} />)
-    const emailInput = getByTestId("emailInput");
-    const button = getByTestId("submitButton");
+    const emailInput = getByTestId(TEST_ID_EMAIL_INPUT);
+    const button = getByTestId(TEST_ID_SUBMIT_BUTTON);
 
 
     await waitFor(() => {
@@ -34,9 +34,9 @@ describe('<EmailPasswordForm />', () => {
     const onSubmit = jest.fn(data => (output = data))
 
     const { getByTestId } = render(<EmailPasswordForm onSubmit={onSubmit} onForgotPasswordPress={() => {}} />)
-    const button = getByTestId("submitButton");
-    const emailInput = getByTestId("emailInput");
-    const passwordInput = getByTestId("passwordInput");
+    const button = getByTestId(TEST_ID_SUBMIT_BUTTON);
+    const emailInput = getByTestId(TEST_ID_EMAIL_INPUT);
+    const passwordInput = getByTestId(TEST_ID_PASSWORD_INPUT);
 
     await waitFor(() => {
       fireEvent.changeText(emailInput, email);

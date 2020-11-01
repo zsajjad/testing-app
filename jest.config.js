@@ -4,6 +4,5 @@ module.exports = {
   "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
   "setupFiles": [
     "./jest.mock.js",
-    "./node_modules/react-native-gesture-handler/jestSetup.js"
   ],
 };
