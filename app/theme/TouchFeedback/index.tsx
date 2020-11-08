@@ -13,13 +13,13 @@ const AnimatedNative = Animated.createAnimatedComponent(
 );
 const RIPPLE = Platform.OS === 'android' && Platform.Version >= 21;
 
-type TouchFeedbackProps = {
+export interface TouchFeedbackProps {
   style?: number | any[];
   ripple?: boolean;
   animated?: boolean;
   onPress: (...args: any[]) => any;
   testID?: string;
-};
+}
 
 const TouchFeedback: React.SFC<TouchFeedbackProps> = ({
   children,
