@@ -7,7 +7,7 @@ import React, { useEffect, useRef } from 'react';
 import { Animated } from 'react-native';
 
 import Text from 'theme/Text';
-import TouchFeedback from 'theme/TouchFeedback';
+import TouchFeedback, { TouchFeedbackProps } from 'theme/TouchFeedback';
 
 import style from './style';
 
@@ -22,7 +22,7 @@ const typeForeground = {
   tertiary: style.tertiaryForeground,
 };
 
-interface ButtonProps {
+interface ButtonProps extends TouchFeedbackProps {
   onPress: (...args: any[]) => any;
   label: string | React.ReactNode;
   mini?: boolean;
