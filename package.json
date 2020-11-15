@@ -10,6 +10,8 @@
     "pretest": "yarn lint --fix --quiet",
     "test": "jest",
     "posttest": "open jest.report.html",
+    "pretest-ci": "yarn lint --fix --quiet",
+    "test-ci": "jest",
     "lint": "eslint ."
   },
   "dependencies": {
