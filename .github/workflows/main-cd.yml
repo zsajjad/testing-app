@@ -1,14 +1,14 @@
-name: Alpha Distribution
+name: Beta Distribution
 
 on:
   push:
     branches:
-      - alpha
+      - main
 
 jobs:
-  alpha-distribution:
+  beta-distribution:
     runs-on: ubuntu-latest
-    name: Alpha Distribution
+    name: Beta Distribution
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -59,13 +59,13 @@ jobs:
         name: app-release.aab
         path: android/app/build/outputs/bundle/release
 
-    - name: Deploy to Play Store (ALPHA)
+    - name: Deploy to Play Store (BETA)
       uses: r0adkll/upload-google-play@v1
       with:
         serviceAccountJsonPlainText: ${{ secrets.ANDROID_SERVICE_ACCOUNT }}
         packageName: com.testedapp
         releaseFile: android/app/build/outputs/bundle/release/app-release.aab
-        track: alpha
+        track: beta
         inAppUpdatePriority: 3
         userFraction: 0.5
         whatsNewDirectory: android/release-notes/
