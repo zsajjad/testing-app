@@ -1,0 +1,227 @@
+{
+  "project_info": {
+    "project_number": "859110743609",
+    "firebase_url": "https://zsajjad-93.firebaseio.com",
+    "project_id": "zsajjad-93",
+    "storage_bucket": "zsajjad-93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859110743609:android:a92d09cbe1e8353c",
+        "android_client_info": {
+          "package_name": "com.businesscards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfwsAAwi1tRoavM2RM6fpzS-HmvrgG-Q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "859110743609-bujbho50tib5uittfsmf3bbne19upvbp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.peekaboosdk.sample"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859110743609:android:fa8ba48339ecf41b9637e8",
+        "android_client_info": {
+          "package_name": "com.example.hello"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfwsAAwi1tRoavM2RM6fpzS-HmvrgG-Q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "859110743609-bujbho50tib5uittfsmf3bbne19upvbp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.peekaboosdk.sample"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859110743609:android:1074fd929f9e489c",
+        "android_client_info": {
+          "package_name": "com.peekaboo.geofencingtesting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfwsAAwi1tRoavM2RM6fpzS-HmvrgG-Q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "859110743609-bujbho50tib5uittfsmf3bbne19upvbp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.peekaboosdk.sample"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859110743609:android:d6a523535a1477cc",
+        "android_client_info": {
+          "package_name": "com.peekaboo.partner.partnersampleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfwsAAwi1tRoavM2RM6fpzS-HmvrgG-Q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "859110743609-bujbho50tib5uittfsmf3bbne19upvbp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.peekaboosdk.sample"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859110743609:android:3142942995fd75339637e8",
+        "android_client_info": {
+          "package_name": "com.testedapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfwsAAwi1tRoavM2RM6fpzS-HmvrgG-Q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "859110743609-bujbho50tib5uittfsmf3bbne19upvbp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.peekaboosdk.sample"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859110743609:android:c667e523b08a65d0",
+        "android_client_info": {
+          "package_name": "com.zsajjad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfwsAAwi1tRoavM2RM6fpzS-HmvrgG-Q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859110743609-8dg1lmamdlimijesu330l4qqd4qrn3dj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "859110743609-bujbho50tib5uittfsmf3bbne19upvbp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.peekaboosdk.sample"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
