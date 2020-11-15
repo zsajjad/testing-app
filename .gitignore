@@ -59,3 +59,6 @@ buck-out/
 /ios/Pods/
 
 .vscode
+
+signingKey.txt
+*.aab
