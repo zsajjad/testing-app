@@ -44,11 +44,21 @@ jobs:
       run: |
         cd android && ./gradlew assembleRelease --no-daemon
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v1
+    - name: Sign APK
+      id: sign_app
+      uses: r0adkll/sign-android-release@v1
       with:
-        name: app-release.apk
-        path: android/app/build/outputs/apk/release/
+        releaseDirectory: android/app/build/outputs/apk/release/
+        signingKeyBase64: ${{ secrets.ANDROID_SIGNING_KEY }}
+        alias: ${{ secrets.ANDROID_SIGNING_ALIAS }}
+        keyStorePassword: ${{ secrets.ANDROID_SIGNING_STORE_PASSWORD }}
+        keyPassword: ${{ secrets.ANDROID_SIGNING_KEY_PASSWORD }}
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Signed APK
+        path: ${{steps.sign_app.outputs.signedReleaseFile}}
 
     - name: Distribute app via Firebase App Distribution
       env:
@@ -60,7 +70,7 @@ jobs:
         yarn global add firebase-tools
         export PATH="$(yarn global bin):$PATH"
         firebase \
-          appdistribution:distribute android/app/build/outputs/apk/release/app-release.apk \
+          appdistribution:distribute ${{steps.sign_app.outputs.signedReleaseFile}} \
           --app $firebaseAppId \
           --release-notes "$notes" \
           --groups "$firebaseGroups" \
