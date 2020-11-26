@@ -45,6 +45,7 @@ jobs:
         cd android && ./gradlew bundleRelease --no-daemon
 
     - name: Sign App Bundle
+      id: sign_app
       uses: r0adkll/sign-android-release@v1
       with:
         releaseDirectory: android/app/build/outputs/bundle/release
@@ -54,17 +55,17 @@ jobs:
         keyPassword: ${{ secrets.ANDROID_SIGNING_KEY_PASSWORD }}
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2
       with:
-        name: app-release.aab
-        path: android/app/build/outputs/bundle/release
+        name: Signed App Bundle
+        path: ${{steps.sign_app.outputs.signedReleaseFile}}
 
     - name: Deploy to Play Store (ALPHA)
       uses: r0adkll/upload-google-play@v1
       with:
         serviceAccountJsonPlainText: ${{ secrets.ANDROID_SERVICE_ACCOUNT }}
         packageName: com.testedapp
-        releaseFile: android/app/build/outputs/bundle/release/app-release.aab
+        releaseFile: ${{steps.sign_app.outputs.signedReleaseFile}}
         track: alpha
         inAppUpdatePriority: 3
         userFraction: 0.5
