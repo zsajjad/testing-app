@@ -23,6 +23,7 @@ function HomeScreen(props: HomeScreenProps): React.ReactChild {
         />
       </View>
       <Text>Hello World</Text>
+      <Text>Adding Demo PR for testing CI Actions</Text>
     </View>
   );
 }
