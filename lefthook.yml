@@ -4,15 +4,5 @@ ci-hook:
   parallel: true
   skip_output: true
   commands:
-    type-check:
-      glob: '*.{ts,tsx}'
-      run: yarn type-check
     lint:
-      glob: '*.{js,ts,jsx,tsx}'
-      run: yarn lint:eslint:fix
-    style-lint:
-      glob: '*.{js,ts,jsx,tsx}'
-      run: yarn lint:css
-    spelling:
-      glob: '*.{js,ts,jsx,tsx,md}'
-      run: yarn cspell **/*.{js,ts,jsx,tsx,md}
+      run: yarn lint
