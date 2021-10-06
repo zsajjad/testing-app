@@ -38,6 +38,7 @@
     "yup": "^0.29.3"
   },
   "devDependencies": {
+    "@arkweid/lefthook": "^0.7.7",
     "@babel/core": "^7.12.3",
     "@babel/runtime": "^7.12.1",
     "@react-native-community/eslint-config": "^2.0.0",
